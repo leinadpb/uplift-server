@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@uplift-ltd/interview-frontend-node-server",
+  "name": "uplift-service",
   "version": "0.1.0",
   "proxy": "http://localhost:8000",
   "license": "UNLICENSED",
