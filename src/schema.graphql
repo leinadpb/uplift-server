@@ -1,0 +1,38 @@
+type Game {
+  id: ID!
+  cardsLeft: [ICard!]
+  acesLeft: [ICard!]
+  status: GameStatus
+}
+
+enum GameStatus {
+  ONGOING
+  GAME_WON
+  GAME_LOST
+}
+
+enum CardType {
+  HEARTS
+  DIAMONDS
+  SPADES
+  CLUBS
+}
+
+type ICard {
+  type: CardType!
+  value: String!
+}
+
+type Query {
+  currentGame: Game!
+}
+
+type DealResult {
+  dealed: [ICard!]
+  game: Game!
+}
+
+type Mutation {
+  deal: DealResult!
+  reset: Game!
+}
