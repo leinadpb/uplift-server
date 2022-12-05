@@ -8,7 +8,7 @@
     "gql-codegen": "graphql-codegen --config codegen.yml",
     "start": "ts-node src/index.ts",
     "start:build": "node build/index.js",
-    "build": "run-s clean compile copy",
+    "build": "yarn clean && yarn compile && yarn copy",
     "clean": "rm -rf build",
     "compile": "tsc --outDir build",
     "copy": "cp src/schema.graphql build/schema.graphql",
